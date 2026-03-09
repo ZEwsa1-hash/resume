@@ -26,7 +26,6 @@
       box-shadow: 0 4px 32px rgba(0,0,0,0.10);
     }
 
-    /* HEADER */
     .header {
       background: linear-gradient(135deg, #1e293b, #334155);
       color: #fff;
@@ -73,7 +72,6 @@
 
     .contact-item .icon { font-size: 1rem; }
 
-    /* BODY */
     .body {
       display: grid;
       grid-template-columns: 1fr 260px;
@@ -82,7 +80,6 @@
     .main { padding: 32px 32px 32px 40px; }
     .sidebar { padding: 32px 32px 32px 0; border-left: 1px solid #f1f5f9; }
 
-    /* SECTION */
     .section { margin-bottom: 28px; }
     .section-title {
       font-size: 0.7rem;
@@ -95,7 +92,6 @@
       border-bottom: 2px solid #e0e7ff;
     }
 
-    /* PROJECT CARD */
     .job-card { margin-bottom: 20px; }
     .job-card:last-child { margin-bottom: 0; }
 
@@ -125,7 +121,6 @@
       line-height: 1.6;
     }
 
-    /* SKILL BADGE */
     .skill-badge {
       display: flex;
       align-items: center;
@@ -149,7 +144,6 @@
       background: #6366f1;
     }
 
-    /* INFO ROW */
     .info-row {
       display: flex;
       align-items: flex-start;
@@ -166,7 +160,6 @@
 
     .info-value { color: #1e293b; font-weight: 500; }
 
-    /* TAG */
     .tag {
       display: inline-block;
       background: #ede9fe;
@@ -178,7 +171,6 @@
       margin: 3px 3px 3px 0;
     }
 
-    /* NO EXPERIENCE */
     .no-exp {
       font-size: 0.875rem;
       color: #94a3b8;
@@ -191,10 +183,6 @@
   <div id="root"></div>
 
   <script type="text/babel">
-
-    // ─────────────────────────────────────────────
-    // КОМПОНЕНТЫ — один шаблон, разные пропсы
-    // ─────────────────────────────────────────────
 
     function ContactItem({ icon, text }) {
       return (
@@ -252,10 +240,6 @@
     function Tag({ text }) {
       return <span className="tag">{text}</span>;
     }
-
-    // ─────────────────────────────────────────────
-    // ДАННЫЕ
-    // ─────────────────────────────────────────────
 
     const person = {
       name: 'Денис',
@@ -319,15 +303,10 @@
       },
     ];
 
-    // ─────────────────────────────────────────────
-    // ГЛАВНЫЙ КОМПОНЕНТ
-    // ─────────────────────────────────────────────
-
     function App() {
       return (
         <div className="page">
 
-          {/* ШАПКА */}
           <div className="header">
             <div className="header-top">
               <div className="avatar">{person.initials}</div>
@@ -344,8 +323,6 @@
           </div>
 
           <div className="body">
-
-            {/* ЛЕВАЯ КОЛОНКА */}
             <div className="main">
 
               <Section title="Опыт работы">
@@ -378,7 +355,6 @@
 
             </div>
 
-            {/* ПРАВАЯ КОЛОНКА */}
             <div className="sidebar">
 
               <Section title="Навыки">
